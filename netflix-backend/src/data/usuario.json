@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Samuel Gonçalves",
+        "email": "samuel@teste.com",
+        "senha": "123"
+    },
+    {
+        "nome": "Ana Gonçalves",
+        "email": "ana@teste.com",
+        "senha": "123"
+    },
+    {
+        "nome": "Davi Gonçalves",
+        "email": "davi@teste.com",
+        "senha": "123"
+    },
+    {
+        "nome": "Ana Laura Viana",
+        "email": "analaura@teste.com",
+        "senha": "123"
+    }
+]
