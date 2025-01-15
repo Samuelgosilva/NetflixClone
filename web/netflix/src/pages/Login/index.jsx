@@ -1,8 +1,36 @@
+import { useState } from 'react'
+
 // IMAGENS
 import img1 from '../../assets/R.png'
 import Header from '../../components/Header'
 
+
+import api from '../../services/api'
+
 const Login = () => {
+
+    const [credenciais, setCredenciais] = useState({
+        email: '',
+        senha: '',
+    })
+
+    const handleLogin = async () => {
+        try {
+            const response = await api.post('/usuario/login', credenciais)
+            const res = response.data
+
+            if(res.error){
+                alert(res.message)
+                return false
+            }
+
+            localStorage.setItem('@user', JSON.stringify(res.usuario)) // guardando os dados do usuario no browser
+            window.location.reload() // dando reload na pagina
+        } catch (err) {
+           alert(err.message) 
+        }
+    }
+
     return (
 <div className="container-fluid bg_filmes"
      style={{
@@ -10,16 +38,29 @@ const Login = () => {
         height: '100%',
      }}
 >
-        <Header />
+        <Header hideMenu/>
         <div id="caixa_login" className="col-4 offset-4">
             <h1 className="text-white">Entrar</h1>
             <br />
-            <form>
-                <input type="email" className="form-control form-control-lg" placeholder="Email ou número de telefone" />
+            <>
+                <input type="email" 
+                className="form-control form-control-lg" 
+                onChange={(e) => setCredenciais({
+                    ...credenciais,
+                    email: e.target.value
+                })} 
+                placeholder="Email ou número de telefone" />
                 <br />
-                <input type="password" className="form-control form-control-lg" placeholder="Senha" />
+                <input type="password" 
+                className="form-control form-control-lg" 
+                placeholder="Senha" 
+                onChange={(e) => setCredenciais({
+                    ...credenciais,
+                    senha: e.target.value
+                })}
+                />
                 <br />
-                <button className="btn btn-lg btn-block btn-danger">Entrar</button>
+                <button className="btn btn-lg btn-block btn-danger" onClick={handleLogin}>Entrar</button>
                 <div className="row mt-4">
                     <div className="col text-muted">
                         <input type="checkbox" /> Lembrar de mim.
@@ -47,7 +88,7 @@ const Login = () => {
                     </div>
                 </div>
 
-            </form>
+            </>
         </div>
     </div>
 

@@ -1,10 +1,10 @@
 
 import { createRoot } from 'react-dom/client'
-import Home from './pages/Home'
-//import Login from './pages/Login'
+
 import './styles/app.css'
+import Rotas from './Rotas'
 
 
 createRoot(document.getElementById('root')).render(
-  <Home />,
+  <Rotas />,
 )

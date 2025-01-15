@@ -1,14 +1,27 @@
-
+import { useState, useEffect } from 'react'
 import logo from '../../assets/logo.png'
 
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({hideMenu}) => {
+
+    const [user, setUser] = useState({})
+
+    useEffect(() => {
+        setUser(JSON.parse(localStorage.getItem('@user')))
+    }, [])
+
+    const logOut = () => {
+        localStorage.clear()
+        window.location.reload()
+    }
+
   return (
     <header className="row">
                         <div className="col-2">
                             <img src={logo} />
                         </div>
-                        <div className="col-8">
+                        {!hideMenu && <div className="col-8">
                             <ul className="menu_list">
                                 <li>
                                     <a href="#">Início</a>
@@ -26,6 +39,9 @@ const Header = () => {
                                     <a href="#">Minha Lista</a>
                                 </li>
                             </ul>
+                        </div>}
+                        <div className="col-2 text-right">
+                            {!hideMenu && <a onClick={logOut} className='text-white'>Olá, {user?.nome}. Sair</a>}
                         </div>
                     </header>
   )
