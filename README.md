@@ -24,6 +24,7 @@ tela de login, carregamento de filmes e séries com modal dinâmica para carrega
 ## Back end
 - NodeJS
 - Express
+- Imsomnia
 
 ## Front end
 - HTML5
