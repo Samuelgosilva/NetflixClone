@@ -12,11 +12,14 @@ tela de login, carregamento de filmes e séries com modal dinâmica para carrega
 ## Tela Login
 ![Image](https://github.com/user-attachments/assets/d2a019db-4fd1-4bbd-b8a3-1504dd0264f0)
 ## Tela Home
-
+![Image](https://github.com/user-attachments/assets/b43f73a2-622d-41bf-9814-75abc8b18fe9)
+![Image](https://github.com/user-attachments/assets/ee946e1f-1e10-40bb-9105-5a356a735685)
 ## Modal Filme
-
+![Image](https://github.com/user-attachments/assets/40b93a2c-a794-4bfd-9ccc-763c4bed5a4d)
 ## Modal Série
-
+![Image](https://github.com/user-attachments/assets/f01b99ad-688e-42cd-a72b-0904658d6e09)
+## Script Banco
+![Image](https://github.com/user-attachments/assets/766d075e-d4ac-4c8d-9433-2baefe74f0b6)
 # Tecnologias utilizadas
 ## Back end
 - NodeJS
