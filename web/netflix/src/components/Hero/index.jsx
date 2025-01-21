@@ -1,19 +1,23 @@
-import logoDiabo from '../../assets/logoDiabo.png'
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+
+//import logoDiabo from '../../assets/logoDiabo.png'
 import top10 from '../../assets/top10.png'
 
-const Hero = () => {
+
+const Hero = ({ filme }) => {
   return (
-    <div id="hero" className="container-fluid">
+    <div id="hero" className="container-fluid" style={{
+       backgroundImage: `url(${filme.capa})`
+    }}>
                     <div className="container">
                         <div className="row" id="hero_infos">
                             <div className="col-6">
-                                <img src={logoDiabo} className="logo" />
+                                <img className="logo" src={filme.logo}/>
                                 <h1 className="text-white">
                                     <img src={top10} />Top 1 de hoje no Brasil.
                                 </h1>
-                                <p className="text-white">
-                                    Pregadores Profanos. Autoridades Corruptas. Amantes Assassinos.
-                                    Numa cidade cheia de pecadores, um jovem busca justiça.
+                                <p className="text-white">{filme.descricao?.substr(0, 190)}...                                 
                                 </p>
     
                                 <br />
@@ -29,6 +33,9 @@ const Hero = () => {
                     </div>
                 </div>
   )
+
 }
+
+
 
 export default Hero
