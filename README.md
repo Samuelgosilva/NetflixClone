@@ -1,4 +1,4 @@
-# Web Service - Serviço de Pedidos
+# Clone Netflix
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/Samuelgosilva/exemplo-readme/blob/main/LICENSE). 
 
 # Sobre o projeto
