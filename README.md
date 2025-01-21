@@ -10,7 +10,7 @@ tela de login, carregamento de filmes e séries com modal dinâmica para carrega
 
 
 ## Tela Login
-
+![Image](https://github.com/user-attachments/assets/d2a019db-4fd1-4bbd-b8a3-1504dd0264f0)
 ## Tela Home
 
 ## Modal Filme
